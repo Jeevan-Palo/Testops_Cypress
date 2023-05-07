@@ -23,6 +23,7 @@ pipeline {
         }
         stage('Unit Tests') {
             steps {
+                sh 'npm i -g browserslist caniuse-lite --save'
                 sh 'npm run test'
             }
         }
